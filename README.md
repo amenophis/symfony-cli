@@ -61,7 +61,7 @@ Congratulations! You're now ready to use Symfony for your CLI applications.
 
 To see a real-live Symfony CLI script, run the following scipt:
 
-    php app/console demo:greet GeekChimp
+    php bin/symfony demo:greet GeekChimp
 
 4) Getting started with Symfony
 -------------------------------
