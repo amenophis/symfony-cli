@@ -8,7 +8,7 @@ This document contains information on how to download, install, and start
 using Symfony. For a more detailed explanation, see the [Installation][1]
 chapter of the Symfony Documentation.
 
-1) Installing the Standard Edition
+1) Installing the CLI Edition
 ----------------------------------
 
 When it comes to installing the Symfony CLI Edition, you have the
@@ -26,7 +26,7 @@ http://getcomposer.org/ or just run the following command:
 
 Then, use the `create-project` command to generate a new Symfony application:
 
-    php composer.phar create-project geekchimp/framework-cli-edition path/to/install
+    php composer.phar create-project geekchimp/symfony-cli-edition path/to/install
 
 Composer will install Symfony and all its dependencies under the
 `path/to/install` directory.
@@ -54,26 +54,20 @@ Execute the `check.php` script from the command line:
 
 If you get any warnings or recommendations, fix them before moving on.
 
-3) Browsing the Demo Application
+3) Running the Demo Application
 --------------------------------
 
-Congratulations! You're now ready to use Symfony.
+Congratulations! You're now ready to use Symfony for your CLI applications.
 
-From the `config.php` page, click the "Bypass configuration and go to the
-Welcome page" link to load up your first Symfony page.
+To see a real-live Symfony CLI script, run the following scipt:
 
-You can also use a web-based configurator by clicking on the "Configure your
-Symfony Application online" link of the `config.php` page.
-
-To see a real-live Symfony page in action, access the following page:
-
-    web/app_dev.php/demo/hello/Fabien
+    php app/console demo:greet GeekChimp
 
 4) Getting started with Symfony
 -------------------------------
 
 This distribution is meant to be the starting point for your Symfony
-applications, but it also contains some sample code that you can learn from
+CLI applications, but it also contains some sample code that you can learn from
 and play with.
 
 A great way to start learning Symfony is via the [Quick Tour][4], which will
@@ -87,23 +81,12 @@ playing with it, you can remove it by following these steps:
 
   * delete the `src/Acme` directory;
 
-  * remove the routing entries referencing AcmeBundle in
-    `app/config/routing_dev.yml`;
-
   * remove the AcmeBundle from the registered bundles in `app/AppKernel.php`;
-
-  * remove the `web/bundles/acmedemo` directory;
-
-  * remove the `security.providers`, `security.firewalls.login` and
-    `security.firewalls.secured_area` entries in the `security.yml` file or
-    tweak the security configuration to fit your needs.
 
 What's inside?
 ---------------
 
 The Symfony Standard Edition is configured with the following defaults:
-
-  * Twig is the only configured template engine;
 
   * Doctrine ORM/DBAL is configured;
 
@@ -115,15 +98,9 @@ It comes pre-configured with the following bundles:
 
   * **FrameworkBundle** - The core Symfony framework bundle
 
-  * [**SensioFrameworkExtraBundle**][6] - Adds several enhancements, including
-    template and routing annotation capability
+  * [**SensioFrameworkExtraBundle**][6] - Adds several enhancements.
 
   * [**DoctrineBundle**][7] - Adds support for the Doctrine ORM
-
-  * [**TwigBundle**][8] - Adds support for the Twig templating engine
-
-  * [**SecurityBundle**][9] - Adds security by integrating Symfony's security
-    component
 
   * [**SwiftmailerBundle**][10] - Adds support for Swiftmailer, a library for
     sending emails
@@ -133,19 +110,10 @@ It comes pre-configured with the following bundles:
   * [**AsseticBundle**][12] - Adds support for Assetic, an asset processing
     library
 
-  * [**JMSSecurityExtraBundle**][13] - Allows security to be added via
-    annotations
-
-  * [**JMSDiExtraBundle**][14] - Adds more powerful dependency injection
-    features
-
-  * **WebProfilerBundle** (in dev/test env) - Adds profiling functionality and
-    the web debug toolbar
-
   * **SensioDistributionBundle** (in dev/test env) - Adds functionality for
     configuring and working with Symfony distributions
 
-  * [**SensioGeneratorBundle**][15] (in dev/test env) - Adds code generation
+  * [**SensioGeneratorBundle**][13] (in dev/test env) - Adds code generation
     capabilities
 
   * **AcmeDemoBundle** (in dev/test env) - A demo bundle with some example
@@ -165,6 +133,4 @@ Enjoy!
 [10]: http://symfony.com/doc/2.1/cookbook/email.html
 [11]: http://symfony.com/doc/2.1/cookbook/logging/monolog.html
 [12]: http://symfony.com/doc/2.1/cookbook/assetic/asset_management.html
-[13]: http://jmsyst.com/bundles/JMSSecurityExtraBundle/master
-[14]: http://jmsyst.com/bundles/JMSDiExtraBundle/master
-[15]: http://symfony.com/doc/2.1/bundles/SensioGeneratorBundle/index.html
+[13]: http://symfony.com/doc/2.1/bundles/SensioGeneratorBundle/index.html

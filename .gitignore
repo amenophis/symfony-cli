@@ -57,5 +57,5 @@ nbproject/
 /composer.phar
 /composer.lock
 /phpunit.xml
-bin/doctrine
-bin/doctrine.php
+/bin/doctrine
+/bin/doctrine.php
