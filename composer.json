@@ -1,5 +1,5 @@
 {
-    "name": "geekchimp/framework-cli-edition",
+    "name": "geekchimp/symfony-cli-edition",
     "description": "The \"Symfony CLI Edition\" distribution",
     "autoload": {
         "psr-0": { "": "src/" }
